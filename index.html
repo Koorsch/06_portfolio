@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&family=Oswald&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="tech/general.css">
+    <title>Portfolio - KEA MMD B 2023</title>
+</head>
+
+<body id="start">
+    <header>
+        <nav>
+            <button type="button" id="modeSwitch">AEH</button>
+            <ul>
+                <li><a href="#info" onclick="scrollAndOpen('#info')">About me</a></li>
+                <li><a href="#portfolio" onclick="scrollAndOpen('#portfolio')">Portfolio</a></li>
+                <li><a href="#projects" onclick="scrollAndOpen('#projects')">Projects</a></li>
+            </ul>
+        </nav>
+        <section id="hero">
+            <figure>
+                <img src="media/coding.webp" alt="Hero? placeholder.">
+            </figure>
+        </section>
+    </header>
+
+    <main>
+        <!-- Progress bar -->
+        <div class="timeline">
+            <ul>
+                <li><a href="#start">Welcome!</a></li>
+                <li><a href="#info" onclick="scrollAndOpen('#info')">About me</a></li>
+                <li><a href="#portfolio" onclick="scrollAndOpen('#portfolio')">Portfolio</a></li>
+                <li><a href="#projects" onclick="scrollAndOpen('#projects')">Projects</a></li>
+            </ul>
+            <div class="progress">
+                <div class="progress-bar" id="scrollbar"></div>
+            </div>
+        </div>
+        <!-- Progress bar END-->
+        <div class="main-content">
+            <!--   Image previewer, niks pille!-->
+            <div id="fullscreen-preview">
+                <img src="#" id="preview-image" alt="Previewer">
+                <div id="preview-buttons">
+                    <button type="button" id="close-button" onclick="closeFullScreen()">Close</button>
+                </div>
+            </div>
+            <!--   Image previewer END -->
+            <section id="info">
+                <div>
+                    <h2 onclick="toggleDetails(this)">Information</h2>
+                    <details>
+                        <summary>
+                            <h3>About me</h3>
+                        </summary>
+                        <article id="about">
+                            <figure>
+                                <img src="media/andreas.webp" alt="Et billede af Andreas">
+                            </figure>
+                            <div>
+                                <h3>Hi there! My name's Andreas and I'm from Sweden!</h3>
+                                <p>Currently finishing off my first semester at KEA Multimediadesigner.</p>
+                                <p>I decided in 2022 that it was time to try something new after having been in the
+                                    Restaurant
+                                    business, working as a chef, for roughly 12 years</p>
+                                <p>So far there have been plenty of challenges that definitely have piqued my interest
+                                    and am
+                                    looking forward to what the future holds for me!</p>
+                            </div>
+                        </article>
+                    </details>
+                    <details>
+                        <summary>
+                            <h3>Skills</h3>
+                        </summary>
+                        <article id="skills">
+                            <div>
+
+                                <p>Studying at KEA (especially the first semester) has introduced plenty of new tools
+                                    that I've been using on the daily.</p>
+                            </div>
+                            <div>
+                                <p>Some of the noteworthy, but not limited to, things I'm currently developing my skills
+                                    in.</p>
+                                <ul>
+                                    <li>HTML/CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>Git/Github</li>
+                                    <li>
+                                        <details>
+                                            <summary>Adobe</summary>
+                                            <ul>
+                                                <li>Illustrator</li>
+                                                <li>XD</li>
+                                                <li>Premiere Pro</li>
+                                                <li>Photoshop</li>
+                                                <li>Audition</li>
+                                            </ul>
+                                        </details>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </article>
+                    </details>
+                </div>
+            </section>
+            <section id="portfolio">
+                <h2 onclick="toggleDetails(this)">Portfolio</h2>
+                <div id="process">
+                    <details>
+                        <summary>
+                            <h3>Starting up</h3>
+                        </summary>
+                        <p>Every journey has a start somewhere... In my case I sat down and just
+                            started making sketches in my hand. Also bombarded the sketches with all the
+                            functionality
+                            and quirky things I would want to implement at some point. Now time will tell if it can all
+                            be implemented.</p>
+                        <p>In hindsight they're quite chaos-y, but they're readable and explainable (hopefully!)</p>
+                        <div class="gallery">
+                            <figure>
+                                <img src="media/sketch1.webp" alt="Sketches1" onclick="openFullScreen(this)">
+                                <figcaption>First sketches</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="media/sketch2.webp" alt="Sketches2" onclick="openFullScreen(this)">
+                                <figcaption>More sketches</figcaption>
+                            </figure>
+                        </div>
+                    </details>
+                </div>
+                <div id="process2">
+                    <details>
+                        <summary>
+                            <h3>XD shenanigans</h3>
+                        </summary>
+                        <p>After continously sketching I whipped up some XD artboards to plan some more
+                            of the layout and look. I skipped moodboard this time, but usually I prepare them for the
+                            projects.</p>
+                        <p>Contrast and content is something of a weakness that I've noticed, but also tried correcting
+                            this time around.
+                        </p>
+                        <div class="gallery">
+                            <figure>
+                                <img src="media/styletile.webp" alt="Styletile" onclick="openFullScreen(this)">
+                                <figcaption>Styletile</figcaption>
+                            </figure>
+                        </div>
+                    </details>
+                </div>
+                <div id="process3">
+                    <details>
+                        <summary>
+                            <h3>Coding up the skeleton of the site.</h3>
+                        </summary>
+                        <p>After XD work was done I went about to code up the webpage using my
+                            layout diagram and wireframe.</p>
+                        <div class="gallery">
+                            <figure>
+                                <img class="wframe" src="media/layoutdiagram.drawio.png" alt="Layoutdiagram"
+                                    onclick="openFullScreen(this)">
+                            </figure>
+                            <figure>
+                                <img class="wframe" src="media/wireframe.drawio.png" alt="Wireframe"
+                                    onclick="openFullScreen(this)">
+                            </figure>
+                        </div>
+                    </details>
+                </div>
+                <div id="process4">
+                    <details>
+                        <summary>
+                            <h3>Adding styling</h3>
+                        </summary>
+                        <p>After setting up the base skeleton of the page I proceeded to style it up with CSS to
+                            more liken my styletile starting with DarkMode (next up will be adding toggles to my button
+                            to switch between the dark/light).</p>
+                        <div class="gallery">
+                            <figure>
+                                <img src="media/skeleton.webp" alt="Skeletonpage" onclick="openFullScreen(this)">
+                                <figcaption>Good ol' HTML</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="media/styling-1.webp" alt="CSS'ing" onclick="openFullScreen(this)">
+                                <figcaption>Getting some styling on</figcaption>
+                            </figure>
+                        </div>
+                    </details>
+                </div>
+                <div id="process5">
+                    <details>
+                        <summary>
+                            <h3>Rounding off!</h3>
+                        </summary>
+                        <p>Unfortunately there are some kinks and things to iron out. But I just ran out of time and
+                            this is what'll be presented!</p>
+                        <p>All thoughts and future implementations that was planned will be updated after the
+                            exam-period is over (fingers crossed!).</p>
+                        <div class="gallery">
+                            <!-- might be used later? 
+                                
+                                <figure>
+                                <img src="#" alt="WHAT THEN" onclick="openFullScreen(this)">
+                                <figcaption>WAT DIS</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="#" alt="WHAT THEN" onclick="openFullScreen(this)">
+                                <figcaption>Getting some styling on</figcaption>
+                            </figure> -->
+                        </div>
+                    </details>
+                </div>
+            </section>
+            <section id="projects">
+                <h2 onclick="toggleDetails(this)">Projects</h2>
+                <article id="project-gallery">
+                    <div>
+                        <figure>
+                            <img src="media/web_emnesite.webp" alt="Website - forside" onclick="toggle('theme2')">
+                        </figure>
+                        <details id="theme2">
+                            <summary>
+                                <h3>Theme 2 - Website/Emnesite</h3>
+                            </summary>
+                            <p>Top picture is of the website we got to style however we wished to.</p>
+                            <p>Bottom picture is of a site we made from scratch, with our topic of choosing</p>
+                            <div id="double-button">
+                                <button type="button"
+                                    onclick="window.open('https://koocorp.dk/kea/02_web/01_website/website/'), '_blank';">Go
+                                    to
+                                    Website</button>
+                                <button type="button"
+                                    onclick="window.open('http://koocorp.dk/kea/02_web/02_emnesite/'), '_blank';">Go to
+                                    Emnesite</button>
+                            </div>
+                        </details>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="media/ux.webp" alt="UX - XD forside" onclick="toggle('theme3')">
+                        </figure>
+                        <details id="theme3">
+                            <summary>
+                                <h3> Theme 3 - UX</h3>
+                            </summary>
+                            <p>Introduction of XD and prototyping. </p>
+                            <p>I made a bamboo themed clothing-store which caters to lovers of Pandas.</p>
+                            <div>
+                                <button type="button"
+                                    onclick="window.open('https://xd.adobe.com/view/21fdd17a-c851-4841-b724-20e48b172b4f-74ae/'), '_blank';">Go
+                                    to Theme
+                                    3</button>
+                            </div>
+                        </details>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="media/animation.webp" alt="Animation - forside" onclick="toggle('theme4')">
+                        </figure>
+                        <details id="theme4">
+                            <summary>
+                                <h3>Theme 4 - Animation</h3>
+                            </summary>
+                            <p>The mission? Make a game (not necessarily responsive) with your home-made assets.</p>
+                            <p>In my game which I named Feed Toothy you feed a little dinosaur meat or eggs to make sure
+                                it's happy!</p>
+                            <div>
+                                <button type="button"
+                                    onclick="window.open('https://koocorp.dk/kea/04_animation/website/'), '_blank';">Go
+                                    to Theme
+                                    4</button>
+                            </div>
+                        </details>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="media/virksomhed.webp" alt="Virksomhed - menuside" onclick="toggle('theme5')">
+                        </figure>
+                        <details id="theme5">
+                            <summary>
+                                <h3>Theme 5 - Virksomhed</h3>
+                            </summary>
+                            <p>In a group of 4 we were tasked to redesign a website for a Company of the Team's
+                                choosing. </p>
+                            <p>First introduction of Github and Trello among other tools. SCRUM was the name of the
+                                game.</p>
+                            <div>
+                                <button type="button"
+                                    onclick="window.open('https://koorsch.github.io/02_virksomhed/menu.html'), '_blank';">Go
+                                    to Theme
+                                    5</button>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div>
+                        <figure>
+                            <img src="media/styling-1.webp" alt="Theme 6" onclick="toggle('theme6')">
+                        </figure>
+                        <details id="theme6">
+                            <summary>
+                                <h3>Theme 6 - Portfolio</h3>
+                            </summary>
+                            <p>It's this theme! Click the button to open it up in a new window!</p>
+                            <div>
+                                <button type="button" onclick="window.open('#start'), '_blank';">Go to Theme
+                                    6</button>
+                            </div>
+                        </details>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#info" onclick="scrollAndOpen('#info')">About me</a></li>
+                <li><a href="#portfolio" onclick="scrollAndOpen('#portfolio')">Portfolio</a></li>
+                <li><a href="#projects" onclick="scrollAndOpen('#projects')">Projects</a></li>
+                <li><a href="#start" onclick="closeAllDetails()">Back to top</a></li>
+            </ul>
+        </nav>
+        <h3>Andreas Ekvall-Hofvander</h3>
+        <h3>MMD B 2023</h3>
+    </footer>
+    <script src="tech/general.js"></script>
+</body>
+
+</html>
