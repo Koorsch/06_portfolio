@@ -178,6 +178,7 @@ details > ul {
   overflow-x: scroll;
   border-bottom: 2px solid var(--ctacol);
   background-color: var(--tertiary-color);
+  overflow: hidden;
 }
 .timeline ul {
   background-color: var(--main-color);
