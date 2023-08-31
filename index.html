@@ -26,9 +26,9 @@
             </ul>
         </nav>
         <section id="hero">
-            <figure>
-                <img src="media/coding.webp" alt="Hero? placeholder.">
-            </figure>
+            <!-- <figure>
+                    <img src="media/coding.webp" alt="Hero? placeholder.">
+                </figure> -->
         </section>
     </header>
 
@@ -55,7 +55,7 @@
                 </div>
             </div>
             <!--   Image previewer END -->
-            <section id="info">
+            <article id="info">
                 <div>
                     <h2 onclick="toggleDetails(this)">Information</h2>
                     <details>
@@ -63,11 +63,10 @@
                             <h3>About me</h3>
                         </summary>
                         <article id="about">
-                            <figure>
-                                <img src="media/andreas.webp" alt="Et billede af Andreas">
-                            </figure>
-                            <div>
+                            <section id="meImg">
                                 <h3>Hi there! My name's Andreas and I'm from Sweden!</h3>
+                            </section>
+                            <section id="meInfo">
                                 <p>Currently finishing off my first semester at KEA Multimediadesigner.</p>
                                 <p>I decided in 2022 that it was time to try something new after having been in the
                                     Restaurant
@@ -75,7 +74,7 @@
                                 <p>So far there have been plenty of challenges that definitely have piqued my interest
                                     and am
                                     looking forward to what the future holds for me!</p>
-                            </div>
+                            </section>
                         </article>
                     </details>
                     <details>
@@ -84,7 +83,6 @@
                         </summary>
                         <article id="skills">
                             <div>
-
                                 <p>Studying at KEA (especially the first semester) has introduced plenty of new tools
                                     that I've been using on the daily.</p>
                             </div>
@@ -109,11 +107,10 @@
                                     </li>
                                 </ul>
                             </div>
-
                         </article>
                     </details>
                 </div>
-            </section>
+            </article>
             <section id="portfolio">
                 <h2 onclick="toggleDetails(this)">Portfolio</h2>
                 <div id="process">

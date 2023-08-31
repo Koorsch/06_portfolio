@@ -18,7 +18,7 @@
 
 /* ##########BASE STYLING########## */
 body {
-  margin: 0.5rem;
+  margin: auto;
   background-color: var(--main-color);
   color: var(--fontcol);
   max-width: 1400px;
@@ -62,7 +62,11 @@ a {
 a:hover {
   color: var(--ctacol);
 }
-
+header {
+  display: flex;
+  flex-direction: column;
+  flex: 1 2;
+}
 header nav {
   position: sticky;
   display: flex;
@@ -165,8 +169,8 @@ details > ul {
 
 /* ##########SPECIAL CLASSES########## */
 .main-content {
-  display: grid;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 .timeline {
@@ -209,7 +213,7 @@ details > ul {
   height: fit-content;
 }
 .gallery figure {
-  display: grid;
+display: grid;
 object-fit: cover;
 width: 80%;
 height: 80%;
@@ -232,31 +236,45 @@ align-items: center;
 
 /* ##########SPECIAL ID'S########## */
 #start {
-margin: 1vh 3vw;
+display: flex;
+flex-direction: column;
 }
 #hero {
+  display: grid;
+  padding: 0.25rem;
+  grid-template-columns: 1fr;
+  height: 300px;
   width: 100%;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  background-size: cover;
+  background-image: url(../media/coding.webp);
+  transition: opacity 0.3s ease;
+  border: 0.15rem solid var(--ctacol2);
   border-radius: 0.25rem;
-  overflow: hidden;
 }
-#hero figure {
-  display: flex;
-  justify-content: center;
-}
-#hero figure img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    border: 0.15rem solid var(--ctacol2);
-    border-radius: 0.25rem;
-    width: fit-content;
-    object-fit: fill;
-    transition: opacity 0.3s ease;
-    overflow: hidden;
-}
+
 #info, #portfolio, #projects {
   border-bottom: solid 2px var(--ctacol);
+}
+#about {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+width: 100%;
+}
+#meImg {
+  flex: 0 1 auto;
+  background-image: url(../media/andreas.webp);
+  background-repeat: no-repeat;
+  background-position: 50% 5%;
+}
+#meInfo {
+  flex: 0 1 300px;
+
 }
 #about figure {
   display: flex;
@@ -282,7 +300,6 @@ margin: 1vh 3vw;
   grid-template-rows: auto;
   gap: 0.25rem;
   margin-bottom: 0.25rem;
-  justify-content: center;
 }
 #project-gallery div ::after {
   margin-bottom: 3rem;
@@ -363,12 +380,6 @@ margin: 1vh 3vw;
 /* ##########ANIMATIONS END########## */
 
 /* ##########MEDIA QUERIES########## */
-@media (min-width: 800px) {
 
-
-}
-@media (min-width: 1400px) {
-
-}
 /* ##########MEDIA QUERIES END########## /*
 
